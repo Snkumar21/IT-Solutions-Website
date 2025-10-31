@@ -1,54 +1,291 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tech Nexus Solutions</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>IT Solutions — Home</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<div class="container">
-<header class="header">
-<a class="brand" href="index.html">
-<div class="logo"><img src="assets/logo.png" alt="Tech Nexus logo" style="width:100%;height:100%;object-fit:contain"></div>
-<div>
-<div style="font-weight:700">Tech Nexus Solutions</div>
-<div class="site-tag">College training • Internships • Career guidance</div>
-</div>
-</a>
-<nav class="nav">
-<a href="index.html" class="active">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="training.html">Training & Internships</a>
-<a href="career.html">Career Guidance</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
+    <aside class="sidebar" aria-label="Primary">
+        <div class="brand">
+            <div class="logo">IT</div>
+            <div>
+                <h1>IT Solutions</h1>
+                <div style="font-size:12px;color:var(--muted)">Smart. Secure. Scalable.</div>
+            </div>
+        </div>
 
+        <nav aria-label="Main navigation">
+            <a class="nav-link active" href="#"><span>🏠</span> Dashboard</a>
+            <a class="nav-link" href="services.html"><span>🛠️</span> Services</a>
+            <a class="nav-link" href="career.html"><span>🔎</span> Career</a>
+            <a class="nav-link" href="training.html"><span>🎓</span> Training & Internships</a>
+            <a class="nav-link" href="contact.html"><span>✉️</span> Contact</a>
+        </nav>
 
-<section class="hero card">
-<div class="hero-text">
-<h1>We build careers & products</h1>
-<p class="small">End-to-end IT services, college training programs, internship opportunities and career mentoring — all under one roof.</p>
-<a class="cta" href="training.html">Explore Trainings</a>
-</div>
-<div>
-<img src="https://via.placeholder.com/360x220?text=IT+Services" alt="hero" style="border-radius:8px;max-width:100%">
-</div>
-</section>
+        <div class="meta">
+            <strong>Support:</strong>
+            <div style="margin-top:6px;">help@itsolutions.example</div>
+        </div>
+    </aside>
 
+    <main class="main">
+        <div class="topbar">
+            <div style="display:flex;gap:12px;align-items:center">
+                <button id="openSidebar" class="btn secondary" style="display:none">☰</button>
+                <div class="search" role="search">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="6" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <input aria-label="Search services and projects" placeholder="Search services, projects..." />
+                </div>
+            </div>
 
-<section class="grid">
-<div class="card"><h3>Our Services</h3><p class="small">Web, Mobile, Cloud, AI, DevOps and more.</p></div>
-<div class="card"><h3>Trainings</h3><p class="small">Project-based training with placement assistance.</p></div>
-<div class="card"><h3>Career Guidance</h3><p class="small">Resume reviews, mock interviews and mentorship.</p></div>
-</section>
+            <div class="actions">
+                <div style="text-align:right">
+                    <div style="font-size:13px;color:var(--muted)">Welcome back,</div>
+                    <div style="font-weight:700">Team Lead</div>
+                </div>
+                <button class="btn" id="loginBtn">Login</button>
+            </div>
+        </div>
 
+        <section class="grid" aria-label="Overview">
+            <div class="card col-4">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                    <h2 style="margin:0">Overview</h2>
+                    <div style="color:var(--muted);font-size:13px">Updated 2h ago</div>
+                </div>
+                <div style="height:12px"></div>
+                <div class="stats">
+                    <div class="stat">
+                        <h3>+120</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat">
+                        <h3>18</h3>
+                        <p>Active Projects</p>
+                    </div>
+                    <div class="stat">
+                        <h3>23</h3>
+                        <p>Trainings</p>
+                    </div>
+                </div>
+            </div>
 
-<footer class="footer">© <span id="year"></span> Tech Nexus Solutions</footer>
-</div>
-<script>document.getElementById('year').innerText = new Date().getFullYear()</script>
-<script src="js/main.js"></script>
+            <div class="card col-8" id="services">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                    <h2 style="margin:0">Our Services</h2>
+                    <a href="#services" style="font-size:13px;color:var(--muted);text-decoration:none">View all</a>
+                </div>
+                <div style="height:12px"></div>
+                <div class="services" aria-label="Services list">
+                    <div class="service">
+                        <h3>Cloud & DevOps</h3>
+                        <p style="margin:6px 0 8px;color:var(--muted);font-size:13px">Cloud migration, automation, CI/CD and monitoring.</p>
+                        <div style="font-weight:700;color:var(--accent);font-size:13px">Learn more →</div>
+                    </div>
+                    <div class="service">
+                        <h3>Custom Software</h3>
+                        <p style="margin:6px 0 8px;color:var(--muted);font-size:13px">Web, mobile and backend systems tailored to your workflow.</p>
+                        <div style="font-weight:700;color:var(--accent);font-size:13px">Learn more →</div>
+                    </div>
+                    <div class="service">
+                        <h3>Security & Compliance</h3>
+                        <p style="margin:6px 0 8px;color:var(--muted);font-size:13px">Risk assessments, penetration testing and governance.</p>
+                        <div style="font-weight:700;color:var(--accent);font-size:13px">Learn more →</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-8" id="projects">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                    <h2 style="margin:0">Ongoing Projects</h2>
+                    <div style="color:var(--muted);font-size:13px">Showing 5 active</div>
+                </div>
+                <div style="height:12px"></div>
+                <div style="display:flex;flex-direction:column;gap:12px">
+                    <div class="project">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div>
+                                <strong>Enterprise Migration</strong>
+                                <div style="color:var(--muted);font-size:13px">Cloud replatform for finance suite</div>
+                            </div>
+                            <div style="font-weight:700;color:var(--muted)">Due in 6w</div>
+                        </div>
+                        <div class="progress" aria-hidden>
+                            <i style="width:62%"></i>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;color:var(--muted);font-size:13px">
+                            <div>62% complete</div><div>Team x6</div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div>
+                                <strong>Customer Portal</strong>
+                                <div style="color:var(--muted);font-size:13px">UX-led redesign and feature rollout</div>
+                            </div>
+                            <div style="font-weight:700;color:var(--muted)">Due in 3w</div>
+                        </div>
+                        <div class="progress" aria-hidden>
+                            <i style="width:40%;background:linear-gradient(90deg,#ff8a00,#ff3d00)"></i>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;color:var(--muted);font-size:13px">
+                            <div>40% complete</div><div>Team x4</div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div>
+                                <strong>Security Audit</strong>
+                                <div style="color:var(--muted);font-size:13px">Full-stack penetration testing</div>
+                            </div>
+                            <div style="font-weight:700;color:var(--muted)">Due in 1w</div>
+                        </div>
+                        <div class="progress" aria-hidden>
+                            <i style="width:85%;background:linear-gradient(90deg,var(--success),#34d399)"></i>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;color:var(--muted);font-size:13px">
+                            <div>85% complete</div><div>Team x2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-4" id="clients">
+                <h2 style="margin:0 0 8px">Happy Clients</h2>
+                <div style="display:flex;flex-direction:column;gap:10px">
+                    <div style="display:flex;gap:10px;align-items:center">
+                        <div style="width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#fde68a,#f97316);display:grid;place-items:center;font-weight:700">A</div>
+                        <div>
+                            <strong>Acme Corp</strong>
+                            <div style="font-size:13px;color:var(--muted)">"Transformed our infra — 3x faster deploys."</div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;gap:10px;align-items:center">
+                        <div style="width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#bfdbfe,#3b82f6);display:grid;place-items:center;font-weight:700">B</div>
+                        <div>
+                            <strong>Beta Ltd</strong>
+                            <div style="font-size:13px;color:var(--muted)">"Great training program for our engineers."</div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex;gap:10px;align-items:center">
+                        <div style="width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#d1fae5,#10b981);display:grid;place-items:center;font-weight:700">C</div>
+                        <div>
+                            <strong>CoreSoft</strong>
+                            <div style="font-size:13px;color:var(--muted)">"Security improvements reduced incidents."</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-4" id="trainings">
+                <div style="display:flex;justify-content:space-between;align-items:center">
+                    <h2 style="margin:0">Training & Internships</h2>
+                    <a href="#trainings" style="font-size:13px;color:var(--muted);text-decoration:none">Apply</a>
+                </div>
+                <div style="height:12px"></div>
+                <div class="list">
+                    <div class="list-item">
+                        <div>
+                            <strong>Cloud Engineer Internship</strong>
+                            <div style="font-size:13px;color:var(--muted)">3 months · Remote · Stipend</div>
+                        </div>
+                        <button class="apply">Apply</button>
+                    </div>
+
+                    <div class="list-item">
+                        <div>
+                            <strong>Full-stack Bootcamp</strong>
+                            <div style="font-size:13px;color:var(--muted)">8 weeks · Instructor-led</div>
+                        </div>
+                        <button class="apply">Enroll</button>
+                    </div>
+
+                    <div class="list-item">
+                        <div>
+                            <strong>Security Workshop</strong>
+                            <div style="font-size:13px;color:var(--muted)">2 days · Hands-on</div>
+                        </div>
+                        <button class="apply">Register</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-12" id="contact">
+                <h2 style="margin:0 0 8px">Get in touch</h2>
+                <p style="margin:0 0 12px;color:var(--muted)">Interested in a project, training or partnership? Drop us a message and we'll reach out within 1 business day.</p>
+                <form style="display:flex;gap:12px;flex-wrap:wrap">
+                    <input class="input" placeholder="Your name" style="flex:1;min-width:160px" />
+                    <input class="input" placeholder="Email" style="flex:1;min-width:160px" />
+                    <input class="input" placeholder="Company (optional)" style="flex:1;min-width:160px" />
+                    <textarea class="input" placeholder="Brief message" style="flex-basis:100%;min-height:88px"></textarea>
+                    <div style="display:flex;justify-content:flex-end;width:100%">
+                        <button class="btn" type="button">Send message</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <footer>
+            © <span id="year"></span> IT Solutions — Built with care. Privacy · Terms
+        </footer>
+    </main>
+
+    <!-- Login Modal -->
+    <div id="modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal" role="document">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+                <h2>Sign in</h2>
+                <button class="close" id="closeModal">&times;</button>
+            </div>
+            <div style="font-size:13px;color:var(--muted);margin-bottom:8px">Access your dashboard and project details</div>
+            <div class="form-row">
+                <input class="input" id="email" type="email" placeholder="Email" />
+                <input class="input" id="password" type="password" placeholder="Password" />
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+                <label style="font-size:13px;color:var(--muted)"><input type="checkbox" /> Remember</label>
+                <button class="btn" id="signin">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // small interactions
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const modal = document.getElementById('modal');
+        const loginBtn = document.getElementById('loginBtn');
+        const closeModal = document.getElementById('closeModal');
+        loginBtn.addEventListener('click', ()=>{ modal.style.display='flex'; modal.setAttribute('aria-hidden','false'); });
+        closeModal.addEventListener('click', ()=>{ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); });
+
+        // Close modal on backdrop click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) { modal.style.display='none'; modal.setAttribute('aria-hidden','true'); }
+        });
+
+        // Simple apply handler (no backend)
+        document.querySelectorAll('.apply').forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('Thanks! We received your application. Our team will get back to you.');
+            });
+        });
+
+        // Optional: hide sidebar toggle on small screens (kept for extensibility)
+        const openSidebar = document.getElementById('openSidebar');
+        if (openSidebar){
+            openSidebar.addEventListener('click', () => {
+                const sb = document.querySelector('.sidebar');
+                sb.style.display = sb.style.display === 'none' ? 'flex' : 'none';
+            });
+        }
+    </script>
 </body>
 </html>
