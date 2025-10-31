@@ -1,155 +1,32 @@
-/* style.css - modern responsive simple style */
-:root {
-    --accent:#00bcd4;
-    --bg:#f7f8fb;
-    --card:#ffffff;
-    --text:#222;
+:root{
+--accent:#e53935; /* red tone to match your logo */
+--accent-2:#00bcd4;
+--bg:#f7f8fb;
+--card:#ffffff;
+--text:#111;
 }
+*{box-sizing:border-box}
+body{font-family: 'Poppins', Arial, sans-serif;margin:0;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+.brand .logo{width:54px;height:54px;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.nav{display:flex;gap:10px;flex-wrap:wrap}
+.nav a{padding:8px 12px;text-decoration:none;color:var(--text);border-radius:8px}
+.nav a.active{background:rgba(0,0,0,0.06)}
+.hero{background:linear-gradient(90deg, rgba(229,57,53,0.04), rgba(0,188,212,0.02));padding:40px;border-radius:12px;margin:18px 0;display:flex;gap:24px;align-items:center}
+.hero-text{flex:1}
+.cta{display:inline-block;background:var(--accent);color:white;padding:12px 18px;border-radius:10px;text-decoration:none}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,18,30,0.04);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.service-title{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.small{font-size:0.9rem;color:#555}
+.footer{padding:24px 0;text-align:center;color:#666;font-size:0.95rem}
+.form-row{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.input, textarea, select{padding:10px;border-radius:8px;border:1px solid #e4e7eb;font-size:1rem;background:white}
+.btn{padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:white;cursor:pointer}
+@media(max-width:720px){.hero{flex-direction:column;text-align:center}.nav{justify-content:center}}
 
-* {
-    box-sizing:border-box
-}
 
-body {
-    font-family: 'Poppins', Arial, sans-serif;
-    margin:0; background:var(--bg); color:var(--text);
-    -webkit-font-smoothing:antialiased;
-}
-
-.container {
-    max-width:1100px;
-    margin:0 auto;
-    padding:24px;
-}
-
-.header {
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:16px;
-    padding:18px 0;
-}
-
-.brand {
-    display:flex;
-    align-items:center;
-    gap:12px;
-    text-decoration:none;
-    color:var(--text);
-}
-
-.brand .logo {
-    width:46px;
-    height:46px;
-    border-radius:8px;
-    background:linear-gradient(135deg,var(--accent),#7c4dff);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    font-weight:700
-}
-
-.nav {
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap
-}
-
-.nav a {
-    padding:8px 12px;
-    text-decoration:none;
-    color:var(--text);
-    border-radius:8px
-}
-
-.nav a:hover {
-    background:rgba(0,0,0,0.04)
-}
-
-.hero {
-    background:linear-gradient(90deg, rgba(0,188,212,0.06), rgba(124,77,255,0.04));
-    padding:48px;
-    border-radius:12px;
-    margin:18px 0;
-    display:flex;
-    gap:24px;
-    align-items:center;
-}
-
-.hero-text {
-    flex:1
-}
-
-.cta {
-    display:inline-block;
-    background:var(--accent);
-    color:white;
-    padding:12px 18px;
-    border-radius:10px;
-    text-decoration:none
-}
-
-.card {
-    background:var(--card);
-    padding:18px;
-    border-radius:12px;
-    box-shadow:0 6px 18px rgba(12,18,30,0.04);
-    margin-bottom:16px
-}
-
-.grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:16px
-}
-
-.service-title {
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-bottom:8px
-}
-
-.small {
-    font-size:0.9rem;
-    color:#555
-}
-
-.footer {
-    padding:24px 0;
-    text-align:center;
-    color:#666;
-    font-size:0.95rem
-}
-
-/* form */
-.form-row {
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-    margin-bottom:12px
-}
-
-.input, textarea, select {
-    padding:10px;
-    border-radius:8px;
-    border:1px solid #e4e7eb;
-    font-size:1rem;
-    background:white;
-    resize:vertical;
-}
-
-.btn {
-    padding:10px 14px;
-    border-radius:8px;
-    border:0;
-    background:var(--accent);
-    color:white;
-    cursor:pointer
-}
-
-@media(max-width:720px){
-    .hero{flex-direction:column;text-align:center}
-    .nav{justify-content:center}
-}
+/* small header tweaks */
+.site-tag{font-size:0.85rem;color:#777}
