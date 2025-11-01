@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IT Solutions — Career</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(180deg, #0b0b0f, transparent);
+    }
+    .hero h1 {
+      font-size: 36px;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .counter-bar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+      background: linear-gradient(90deg, rgba(255,217,102,0.03), transparent);
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      flex-wrap: wrap;
+      gap: 20px;
+      text-align: center;
+    }
+    .counter {
+      flex: 1 1 200px;
+    }
+    .counter h2 {
+      font-size: 36px;
+      margin: 0;
+      color: var(--accent);
+    }
+    .counter p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 5px 0 0;
+    }
+
+    .why-join, .open-roles, .stories, .join-form {
+      margin: 40px 0;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      background: linear-gradient(180deg, var(--surface), #0f0f13);
+      border-radius: 10px;
+      padding: 18px;
+      border: 1px solid rgba(255,217,102,0.04);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(255,209,102,0.1);
+    }
+    .card h3 {
+      color: var(--accent);
+      margin: 0 0 8px;
+    }
+    .card p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .stories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
+      text-align: center;
+    }
+    .story {
+      padding: 18px;
+      border: 1px solid rgba(255,217,102,0.04);
+      border-radius: 10px;
+      background: linear-gradient(180deg,#0b0b0f,#0f0f13);
+      box-shadow: var(--card-shadow);
+    }
+    .story img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 8px;
+      object-fit: cover;
+    }
+    .story strong {
+      color: #fff;
+      display: block;
+    }
+    .story p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 5px 0 0;
+    }
+
+    .join-form {
+      background: linear-gradient(180deg, rgba(255,217,102,0.04), rgba(255,217,102,0.02));
+      border-radius: 12px;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: var(--card-shadow);
+    }
+    .join-form form {
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .join-form input, .join-form textarea {
+      background: #11131a;
+      border: 1px solid rgba(255,217,102,0.05);
+      border-radius: 6px;
+      padding: 10px;
+      color: #fff;
+      font-family: inherit;
+    }
+    .join-form button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .join-form button:hover {
+      opacity: 0.85;
+    }
+
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">IT</div>
+      <div>
+        <h1>IT Solutions</h1>
+        <div style="font-size:12px;color:var(--muted)">Smart. Secure. Scalable.</div>
+      </div>
+    </div>
+
+    <nav>
+      <a class="nav-link" href="index.html"><span>🏠</span> Dashboard</a>
+      <a class="nav-link" href="service.html"><span>🛠️</span> Services</a>
+      <a class="nav-link active" href="#"><span>🔎</span> Career</a>
+      <a class="nav-link" href="training.html"><span>🎓</span> Training & Internships</a>
+      <a class="nav-link" href="contact.html"><span>✉️</span> Contact</a>
+    </nav>
+
+    <div class="meta">
+      <strong>Support:</strong>
+      <div style="margin-top:6px;">help@itsolutions.example</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section class="hero">
+      <h1>Join Our Team</h1>
+      <p>Be a part of an innovative, growth-oriented, and collaborative team. Build your career with IT Solutions today.</p>
+    </section>
+
+    <section class="counter-bar" id="stats">
+      <div class="counter"><h2 data-target="120">0</h2><p>Team Members</p></div>
+      <div class="counter"><h2 data-target="30">0</h2><p>Global Partners</p></div>
+      <div class="counter"><h2 data-target="75">0</h2><p>Alumni Network</p></div>
+      <div class="counter"><h2 data-target="20">0</h2><p>Open Roles</p></div>
+    </section>
+
+    <section class="why-join">
+      <h2 style="color:#fff;">Why Work With Us</h2>
+      <div class="card-grid">
+        <div class="card"><h3>Innovative Culture</h3><p>Work on modern technologies with a team that values creativity and problem-solving.</p></div>
+        <div class="card"><h3>Growth & Learning</h3><p>Upskill continuously through training, mentorship, and real-world projects.</p></div>
+        <div class="card"><h3>Flexible Environment</h3><p>Balance your work and life with our hybrid work setup and employee-first policies.</p></div>
+        <div class="card"><h3>Global Exposure</h3><p>Collaborate with clients and teams across the world, gaining global experience.</p></div>
+      </div>
+    </section>
+
+    <section class="open-roles">
+      <h2 style="color:#fff;">Open Positions</h2>
+      <div class="card-grid">
+        <div class="card"><h3>Frontend Developer</h3><p>React.js / Vue.js experts with a strong eye for design and performance optimization.</p></div>
+        <div class="card"><h3>Backend Engineer</h3><p>Work with Node.js, Express, and MongoDB to build scalable APIs and microservices.</p></div>
+        <div class="card"><h3>UI/UX Designer</h3><p>Create beautiful and intuitive interfaces that shape user experiences globally.</p></div>
+        <div class="card"><h3>Data Analyst</h3><p>Turn raw data into meaningful insights and visualizations using modern tools.</p></div>
+      </div>
+    </section>
+
+    <section class="stories">
+      <h2 style="color:#fff;">Employee Stories</h2>
+      <div class="story">
+        <img src="https://via.placeholder.com/60x60.png?text=E1" alt="Employee 1">
+        <strong>Priya Sharma</strong>
+        <p>“I joined as an intern and now lead a team of developers. The journey has been amazing!”</p>
+      </div>
+      <div class="story">
+        <img src="https://via.placeholder.com/60x60.png?text=E2" alt="Employee 2">
+        <strong>Rahul Mehta</strong>
+        <p>“The leadership here really empowers innovation — it feels like a family of creators.”</p>
+      </div>
+      <div class="story">
+        <img src="https://via.placeholder.com/60x60.png?text=E3" alt="Employee 3">
+        <strong>Ananya Gupta</strong>
+        <p>“From learning to execution — IT Solutions has given me confidence and global exposure.”</p>
+      </div>
+    </section>
+
+    <section class="join-form">
+      <h2 style="color:#fff;">Start Your Journey</h2>
+      <p style="color:var(--muted);max-width:500px;margin:0 auto 20px;">Interested in joining us? Fill out the form below — our HR team will connect with you shortly.</p>
+      <form id="careerForm">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="email" name="email" placeholder="Your Email Address" required>
+        <input type="text" name="role" placeholder="Role Interested In">
+        <textarea name="message" rows="4" placeholder="Tell us why you'd like to join" required></textarea>
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+
+    <footer>
+      © <span id="year"></span> IT Solutions — Empowering Careers.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Counter animation
+    const counters = document.querySelectorAll('.counter h2');
+    const speed = 150;
+    const animateCounters = () => {
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const increment = target / speed;
+          if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    };
+
+    const section = document.getElementById('stats');
+    let started = false;
+    window.addEventListener('scroll', () => {
+      const top = section.getBoundingClientRect().top;
+      if (top < window.innerHeight && !started) {
+        animateCounters();
+        started = true;
+      }
+    });
+  </script>
+</body>
+</html>

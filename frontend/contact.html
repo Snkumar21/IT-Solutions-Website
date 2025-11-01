@@ -1,22 +1,191 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact</title><link rel="stylesheet" href="css/style.css"></head><body>
-<div class="container">
-<header class="header">
-  <a class="brand" href="index.html"><div class="logo">TI</div><div><div style="font-weight:700">Tron IT Solutions</div><div class="small">Contact</div></div></a>
-  <nav class="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="training.html">Training</a><a href="career.html">Career</a><a href="contact.html">Contact</a></nav>
-</header>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IT Solutions — Contact</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    /* Page-Specific Styles */
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(180deg, #0b0b0f, transparent);
+    }
+    .hero h1 {
+      font-size: 36px;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 680px;
+      margin: 0 auto;
+    }
 
-<main>
-  <h2>Contact Us</h2>
-  <div class="card" style="max-width:720px">
-    <form id="contact-form">
-      <div class="form-row"><label>Name</label><input name="name" class="input" required></div>
-      <div class="form-row"><label>Email</label><input name="email" type="email" class="input" required></div>
-      <div class="form-row"><label>Message</label><textarea name="message" rows="6" class="input" required></textarea></div>
-      <div><button class="btn">Send Message</button></div>
-    </form>
-  </div>
-</main>
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin: 40px 0;
+    }
 
-<footer class="footer">© Tron IT Solutions</footer>
-</div>
-<script src="js/main.js"></script></body></html>
+    .contact-card {
+      background: linear-gradient(180deg, var(--surface), #0f0f13);
+      border-radius: 10px;
+      padding: 24px;
+      border: 1px solid rgba(255,217,102,0.04);
+      box-shadow: var(--card-shadow);
+    }
+
+    .contact-card h3 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .contact-card p, .contact-card a {
+      color: var(--muted);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    input, textarea {
+      background: #0b0b0f;
+      border: 1px solid rgba(255,217,102,0.05);
+      border-radius: 8px;
+      padding: 12px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      resize: none;
+      transition: border-color .2s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: var(--accent);
+    }
+
+    button {
+      background: var(--accent);
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #0b0b0f;
+      font-weight: 600;
+      transition: background .3s;
+    }
+
+    button:hover {
+      background: #ffeb99;
+    }
+
+    .office-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, rgba(255,217,102,0.04), rgba(255,217,102,0.02));
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      margin-top: 60px;
+    }
+
+    .cta h2 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">IT</div>
+      <div>
+        <h1>IT Solutions</h1>
+        <div style="font-size:12px;color:var(--muted)">Smart. Secure. Scalable.</div>
+      </div>
+    </div>
+
+    <nav>
+      <a class="nav-link" href="index.html"><span>🏠</span> Dashboard</a>
+      <a class="nav-link" href="services.html"><span>🛠️</span> Services</a>
+      <a class="nav-link" href="career.html"><span>🔎</span> Career</a>
+      <a class="nav-link" href="training.html"><span>🎓</span> Training & Internships</a>
+      <a class="nav-link active" href="#"><span>✉️</span> Contact</a>
+    </nav>
+
+    <div class="meta">
+      <strong>Support:</strong>
+      <div style="margin-top:6px;">help@itsolutions.example</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section class="hero">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you! Whether you’re a client, partner, or potential collaborator — let’s connect and grow together.</p>
+    </section>
+
+    <section class="contact-container">
+      <div class="contact-card">
+        <h3>Get in Touch</h3>
+        <form id="contactForm">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="text" placeholder="Subject" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-card office-info">
+        <h3>Our Office</h3>
+        <p><strong>📍 Address:</strong><br> 123 Tech Park Avenue, Bengaluru, India</p>
+        <p><strong>📞 Phone:</strong><br> +91 98765 43210</p>
+        <p><strong>📧 Email:</strong><br> contact@itsolutions.example</p>
+        <p><strong>🕒 Working Hours:</strong><br> Mon - Sat : 9:00 AM - 6:00 PM</p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Partner With Us</h2>
+      <p>Looking for a trusted technology partner to elevate your business? Connect with IT Solutions and let’s build the future together.</p>
+      <a href="career.html"><button>Join Our Team</button></a>
+    </section>
+
+    <footer>
+      © <span id="year"></span> IT Solutions — Built with care. Privacy · Terms
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for reaching out! Our team will get back to you soon.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

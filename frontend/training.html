@@ -1,15 +1,289 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Training & Internships</title><link rel="stylesheet" href="css/style.css"></head><body>
-<div class="container">
-<header class="header">
-  <a class="brand" href="index.html"><div class="logo">TI</div><div><div style="font-weight:700">Tron IT Solutions</div><div class="small">Training & Internships</div></div></a>
-  <nav class="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="training.html">Training</a><a href="career.html">Career</a><a href="contact.html">Contact</a></nav>
-</header>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IT Solutions — Training & Internship</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+    .hero {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(180deg, #0b0b0f, transparent);
+    }
+    .hero h1 {
+      font-size: 36px;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-<main>
-  <h2>Open Opportunities</h2>
-  <div id="opps-list" class="grid"></div>
-</main>
+    .counter-bar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+      background: linear-gradient(90deg, rgba(255,217,102,0.03), transparent);
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      flex-wrap: wrap;
+      gap: 20px;
+      text-align: center;
+    }
+    .counter {
+      flex: 1 1 200px;
+    }
+    .counter h2 {
+      font-size: 36px;
+      margin: 0;
+      color: var(--accent);
+    }
+    .counter p {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 5px 0 0;
+    }
 
-<footer class="footer">© Tron IT Solutions</footer>
-</div>
-<script src="js/main.js"></script></body></html>
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin: 40px 0;
+    }
+    .training-card {
+      background: linear-gradient(180deg, var(--surface), #0f0f13);
+      border-radius: 10px;
+      padding: 20px;
+      border: 1px solid rgba(255,217,102,0.04);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .training-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(255,209,102,0.1);
+    }
+    .training-card h3 {
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .training-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .testimonial {
+      background: linear-gradient(180deg, #0b0b0f, #0f0f13);
+      border-radius: 10px;
+      padding: 20px;
+      border-left: 3px solid var(--accent);
+      margin-bottom: 16px;
+    }
+    .testimonial p {
+      color: var(--muted);
+      font-style: italic;
+    }
+    .testimonial strong {
+      color: #fff;
+      display: block;
+      margin-top: 8px;
+    }
+
+    .apply-form {
+      max-width: 600px;
+      margin: 40px auto;
+      background: linear-gradient(180deg, var(--surface), #0f0f13);
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,217,102,0.05);
+      box-shadow: var(--card-shadow);
+    }
+    .apply-form input,
+    .apply-form select,
+    .apply-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: none;
+      background: #0b0b0f;
+      color: #fff;
+      font-size: 14px;
+    }
+    .apply-form button {
+      background: var(--accent);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .apply-form button:hover {
+      background: #ffe082;
+    }
+  </style>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">IT</div>
+      <div>
+        <h1>IT Solutions</h1>
+        <div style="font-size:12px;color:var(--muted)">Smart. Secure. Scalable.</div>
+      </div>
+    </div>
+
+    <nav>
+      <a class="nav-link" href="index.html"><span>🏠</span> Dashboard</a>
+      <a class="nav-link" href="services.html"><span>🛠️</span> Services</a>
+      <a class="nav-link" href="career.html"><span>🔎</span> Career</a>
+      <a class="nav-link active" href="#"><span>🎓</span> Training & Internships</a>
+      <a class="nav-link" href="contact.html"><span>✉️</span> Contact</a>
+    </nav>
+
+    <div class="meta">
+      <strong>Support:</strong>
+      <div style="margin-top:6px;">help@itsolutions.example</div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section class="hero">
+      <h1>Training & Internship</h1>
+      <p>Empower your career with hands-on experience in real-world technologies. Learn, build, and grow with IT Solutions.</p>
+    </section>
+
+    <section class="counter-bar" id="stats">
+      <div class="counter">
+        <h2 data-target="500">0</h2>
+        <p>Trainees Trained</p>
+      </div>
+      <div class="counter">
+        <h2 data-target="35">0</h2>
+        <p>Expert Mentors</p>
+      </div>
+      <div class="counter">
+        <h2 data-target="12">0</h2>
+        <p>Courses Offered</p>
+      </div>
+      <div class="counter">
+        <h2 data-target="90">0</h2>
+        <p>% Placement Rate</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="color:#fff;margin-top:40px;">Our Training Programs</h2>
+      <div class="training-grid">
+        <div class="training-card">
+          <h3>Full Stack Web Development</h3>
+          <p>Master both frontend and backend using HTML, CSS, JavaScript, React, Node.js, and MongoDB.</p>
+        </div>
+        <div class="training-card">
+          <h3>Artificial Intelligence & ML</h3>
+          <p>Get hands-on with Python, TensorFlow, and real AI/ML projects led by industry mentors.</p>
+        </div>
+        <div class="training-card">
+          <h3>Data Science</h3>
+          <p>Analyze, visualize, and predict using tools like Pandas, NumPy, Matplotlib, and Power BI.</p>
+        </div>
+        <div class="training-card">
+          <h3>Cloud & DevOps</h3>
+          <p>Master AWS, Docker, Kubernetes, and CI/CD pipelines for enterprise-level deployments.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="color:#fff;">Internship Opportunities</h2>
+      <div class="training-grid">
+        <div class="training-card">
+          <h3>Software Developer Intern</h3>
+          <p>Work on real client projects using cutting-edge frameworks and deployment practices.</p>
+        </div>
+        <div class="training-card">
+          <h3>AI Research Intern</h3>
+          <p>Collaborate on data modeling, NLP, and intelligent systems with our research division.</p>
+        </div>
+        <div class="training-card">
+          <h3>Cybersecurity Intern</h3>
+          <p>Learn ethical hacking, penetration testing, and risk management from security experts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="color:#fff;">Testimonials</h2>
+      <div class="testimonial">
+        <p>“IT Solutions’ internship gave me the real experience of working in a tech team. The mentors were extremely supportive.”</p>
+        <strong>- Aditi Sharma, Web Dev Intern</strong>
+      </div>
+      <div class="testimonial">
+        <p>“The AI training program helped me secure my first job! Great learning environment and projects.”</p>
+        <strong>- Rohan Verma, AI Trainee</strong>
+      </div>
+    </section>
+
+    <section>
+      <h2 style="color:#fff;">Apply for Training / Internship</h2>
+      <form class="apply-form">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <select required>
+          <option value="">Select Program</option>
+          <option value="web">Full Stack Web Development</option>
+          <option value="ai">AI & ML</option>
+          <option value="data">Data Science</option>
+          <option value="cloud">Cloud & DevOps</option>
+        </select>
+        <textarea rows="4" placeholder="Tell us about your goals..."></textarea>
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+
+    <footer>
+      © <span id="year"></span> IT Solutions — Built with care. Privacy · Terms
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Counter animation
+    const counters = document.querySelectorAll('.counter h2');
+    const speed = 150;
+    const animateCounters = () => {
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const increment = target / speed;
+
+          if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    };
+
+    const section = document.getElementById('stats');
+    let started = false;
+    window.addEventListener('scroll', () => {
+      const top = section.getBoundingClientRect().top;
+      if (top < window.innerHeight && !started) {
+        animateCounters();
+        started = true;
+      }
+    });
+  </script>
+</body>
+</html>
